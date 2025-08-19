@@ -41,12 +41,12 @@ The tool excludes low-yield libraries based on Z-score, randomly downsamples all
 
 ### Build
 ```bash
-git clone https://github.com/YOURUSERNAME/fragment_downsample.git
-cd fragment_downsample
+git clone https://github.com/YOURUSERNAME/bedfragment_ds.git
+cd bedfragment_ds
 cargo build --release
 ```
 
-This will produce `./target/release/fragment_downsample`
+This will produce `./target/release/bedfragment_ds`
 
 ---
 
@@ -58,7 +58,7 @@ Requires a chromosome sizes file and one or more BED files:
 
 
 ```bash
-./fragment_downsample
+./bedfragment_ds
 --input-type bed
 --chrom-sizes mm10.chrom.sizes
 sample1.bed sample2.bed sample3.bed
@@ -76,7 +76,7 @@ sample1.bed sample2.bed sample3.bed
 Works directly from deduped, sorted, paired-end BAM files:
 
 ```bash
-./fragment_downsample
+./bedfragment_ds
 --input-type bam
 sample1.bam sample2.bam
 --blacklist mm10-blacklist.bed
